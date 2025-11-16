@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "NotWrapper",
+    "slug": "notwrapper",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.notwrapper.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NotWrapper needs camera access for LiveHunt mode",
+        "NSMicrophoneUsageDescription": "NotWrapper needs microphone access to record your narration"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.notwrapper.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow NotWrapper to access your camera for LiveHunt mode"
+        }
+      ]
+    ]
+  }
+}
+

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: notwrapper-analyzer
+    env: docker
+    region: oregon
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 5000
+

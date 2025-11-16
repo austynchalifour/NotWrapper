@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-terminal-bg text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-mono text-sm font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-neon text-black hover:bg-neon/90 hover:shadow-lg hover:shadow-neon/50;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-terminal-gray border border-terminal-border hover:border-neon text-white;
+  }
+  
+  .btn-ghost {
+    @apply btn hover:bg-terminal-gray;
+  }
+  
+  .card {
+    @apply bg-terminal-gray border border-terminal-border rounded-lg p-6;
+  }
+  
+  .input {
+    @apply w-full bg-black border border-terminal-border rounded px-4 py-2 text-white font-mono text-sm focus:outline-none focus:border-neon transition-colors;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold;
+  }
+  
+  .badge-notwrapper {
+    @apply badge bg-neon/20 text-neon border border-neon;
+  }
+  
+  .badge-wrapper-sus {
+    @apply badge bg-yellow-500/20 text-yellow-500 border border-yellow-500;
+  }
+  
+  .badge-wrapper-confirmed {
+    @apply badge bg-red-500/20 text-red-500 border border-red-500;
+  }
+  
+  .glitch-text {
+    @apply relative inline-block;
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  
+  .terminal-text {
+    @apply font-mono text-neon;
+  }
+  
+  .neon-border {
+    @apply border border-neon shadow-lg shadow-neon/30;
+  }
+  
+  .scan-result {
+    @apply card space-y-4;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-terminal-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-terminal-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon/50;
+}
+
+/* Glitch animation */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-glitch-hover:hover {
+  animation: glitch 0.3s infinite;
+}
+
