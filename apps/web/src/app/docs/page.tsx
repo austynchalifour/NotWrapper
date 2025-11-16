@@ -175,14 +175,11 @@ export default function DocsPage() {
                 LiveHunt lets you record video investigations of AI tools and share your findings with the community.
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-400 ml-4">
-                <li>Screen record your investigation process</li>
+                <li>Record your investigation process</li>
                 <li>Add voice narration explaining your findings</li>
                 <li>Submit hunts to earn points on the leaderboard</li>
                 <li>Get upvoted by the community for quality content</li>
               </ul>
-              <p className="text-sm text-neon">
-                Mobile app required for LiveHunt recording (iOS/Android)
-              </p>
             </div>
           </div>
 
@@ -240,7 +237,7 @@ export default function DocsPage() {
               <a href="#" className="text-gray-400 hover:text-neon transition-colors">
                 GitHub
               </a>
-              <a href="#" className="text-gray-400 hover:text-neon transition-colors">
+              <a href="https://x.com/notwrapper?s=20" className="text-gray-400 hover:text-neon transition-colors">
                 Twitter
               </a>
               <a href="#" className="text-gray-400 hover:text-neon transition-colors">

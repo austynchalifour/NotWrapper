@@ -75,7 +75,7 @@ ANALYZER_URL=http://localhost:5000
 
 ## 4. Start Development Servers (3 minutes)
 
-Open **4 terminal windows**:
+Open **3 terminal windows**:
 
 ### Terminal 1 - Backend
 ```bash
@@ -103,13 +103,6 @@ npm run dev
 ```
 Wait for: `Ready on http://localhost:3000`
 
-### Terminal 4 - Mobile App (Optional)
-```bash
-cd apps/mobile
-npm start
-```
-Scan QR code with Expo Go app
-
 ## 5. Test It Out!
 
 ### Web App
@@ -126,12 +119,6 @@ curl -X POST http://localhost:3003/api/scan \
   -d '{"url": "https://example.com"}'
 ```
 
-### Mobile App
-1. Open Expo Go on your phone
-2. Scan QR code from terminal
-3. Tap "Scan a Tool"
-4. Test the scanner
-
 ## Troubleshooting
 
 ### Backend won't start
@@ -146,11 +133,6 @@ curl -X POST http://localhost:3003/api/scan \
 ### Web app can't connect
 - Make sure backend is running
 - Check `NEXT_PUBLIC_BACKEND_URL` points to `http://localhost:3003`
-
-### Mobile app blank screen
-- Backend URL must be your local IP (not localhost)
-- Example: `http://192.168.1.5:3003`
-- Clear Expo cache: `npm start -- -c`
 
 ## What's Next?
 
@@ -179,7 +161,6 @@ See `DEPLOYMENT.md` for full deployment guide
 notwrapper-mvp/
 ├── apps/
 │   ├── web/          # Next.js (http://localhost:3000)
-│   ├── mobile/       # React Native + Expo
 │   ├── backend/      # Node.js API (port 3003)
 │   └── analyzer/     # Python service (port 5000)
 ├── supabase/         # Database schema
@@ -197,9 +178,6 @@ cd apps/analyzer && python app.py
 
 # Web
 cd apps/web && npm run dev
-
-# Mobile
-cd apps/mobile && npm start
 
 # Build for production
 cd apps/web && npm run build

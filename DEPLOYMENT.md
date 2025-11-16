@@ -9,7 +9,6 @@ This guide will walk you through deploying the complete NotWrapper MVP stack.
 - Supabase account
 - Vercel account (for web)
 - Render account (for backend & analyzer)
-- Expo account (for mobile)
 
 ## Step 1: Set Up Supabase
 
@@ -182,63 +181,7 @@ NEXT_PUBLIC_BACKEND_URL=<your-backend-url>
 2. Add your domain
 3. Configure DNS records as instructed
 
-## Step 5: Deploy Mobile App (Expo)
-
-### 5.1 Update Config
-
-Edit `apps/mobile/app.json` and update:
-
-```json
-{
-  "expo": {
-    "extra": {
-      "backendUrl": "<your-backend-url>",
-      "supabaseUrl": "<your-supabase-url>",
-      "supabaseAnonKey": "<your-anon-key>"
-    }
-  }
-}
-```
-
-### 5.2 Install EAS CLI
-
-```bash
-npm install -g eas-cli
-```
-
-### 5.3 Configure EAS
-
-```bash
-cd apps/mobile
-eas login
-eas build:configure
-```
-
-### 5.4 Build for iOS
-
-```bash
-eas build --platform ios
-```
-
-### 5.5 Build for Android
-
-```bash
-eas build --platform android
-```
-
-### 5.6 Submit to Stores
-
-#### TestFlight (iOS)
-```bash
-eas submit --platform ios
-```
-
-#### Google Play (Android)
-```bash
-eas submit --platform android
-```
-
-## Step 6: Configure CORS
+## Step 5: Configure CORS
 
 Update backend to allow your web app domain:
 
@@ -256,7 +199,7 @@ app.use(cors({
 
 Redeploy backend after changes.
 
-## Step 7: Monitoring & Maintenance
+## Step 6: Monitoring & Maintenance
 
 ### Set Up Monitoring
 
@@ -299,12 +242,6 @@ Supabase has automatic backups. To manually backup:
 - Verify NEXT_PUBLIC_BACKEND_URL is set
 - Check CORS configuration
 - Inspect browser console for errors
-
-### Mobile App Issues
-
-- Update backend URL in environment config
-- Rebuild mobile app after backend URL changes
-- Check that backend accepts requests from mobile app
 
 ### Database Connection Issues
 

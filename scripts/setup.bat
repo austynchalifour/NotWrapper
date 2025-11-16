@@ -35,13 +35,6 @@ cd apps\web
 call npm install
 cd ..\..
 
-REM Install mobile dependencies
-echo.
-echo 📦 Installing mobile app dependencies...
-cd apps\mobile
-call npm install
-cd ..\..
-
 REM Install backend dependencies
 echo.
 echo 📦 Installing backend dependencies...

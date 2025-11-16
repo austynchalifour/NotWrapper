@@ -12,11 +12,6 @@ Built with the dev-core aesthetic: Mr. Robot meets Vercel. Monochrome + neon gli
 - Get verdict: **NotWrapper**, **Wrapper Sus**, or **Wrapper Confirmed**
 - View receipts: detected frameworks, asset paths, network calls
 
-### LiveHunt Mode (Mobile)
-- Record screen + face cam overlay
-- Narrate your investigation live
-- Auto-generate summary + thumbnail
-- Export and share your hunts
 
 ### Certified NotWrapper™ Badges
 - Scan your own tool
@@ -37,7 +32,6 @@ Built with the dev-core aesthetic: Mr. Robot meets Vercel. Monochrome + neon gli
 
 ## 🛠 Tech Stack
 
-- **Mobile**: React Native (Expo)
 - **Web**: Next.js 14 (App Router)
 - **Backend**: Node.js + Express
 - **Analyzer**: Python + Flask + Puppeteer + Scrapy
@@ -51,7 +45,6 @@ Built with the dev-core aesthetic: Mr. Robot meets Vercel. Monochrome + neon gli
 notwrapper-mvp/
 ├── apps/
 │   ├── web/          # Next.js web app
-│   ├── mobile/       # React Native (Expo) app
 │   ├── backend/      # Node.js API server
 │   └── analyzer/     # Python analysis service
 ├── packages/
@@ -74,7 +67,6 @@ git clone <repo-url>
 cd notwrapper-mvp
 npm install
 cd apps/web && npm install
-cd ../mobile && npm install
 cd ../backend && npm install
 cd ../analyzer && pip install -r requirements.txt
 ```
@@ -116,13 +108,6 @@ npm run dev
 # Runs on http://localhost:3000
 ```
 
-**Terminal 4 - Mobile App:**
-```bash
-cd apps/mobile
-npm start
-# Scan QR code with Expo Go app
-```
-
 ## 🚀 Deployment
 
 ### Web App (Vercel)
@@ -148,13 +133,6 @@ Set environment variables in Vercel dashboard.
 2. Build command: `cd apps/analyzer && pip install -r requirements.txt`
 3. Start command: `cd apps/analyzer && gunicorn app:app`
 4. Add Dockerfile for better performance
-
-### Mobile (Expo)
-
-```bash
-cd apps/mobile
-eas build --platform all
-```
 
 ## 🎨 Branding
 

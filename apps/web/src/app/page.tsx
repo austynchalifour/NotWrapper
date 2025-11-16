@@ -346,7 +346,7 @@ export default function HomePage() {
               <a href="#" className="text-gray-400 hover:text-neon transition-colors">
                 GitHub
               </a>
-              <a href="#" className="text-gray-400 hover:text-neon transition-colors">
+              <a href="https://x.com/notwrapper?s=20" className="text-gray-400 hover:text-neon transition-colors">
                 Twitter
               </a>
               <a href="#" className="text-gray-400 hover:text-neon transition-colors">

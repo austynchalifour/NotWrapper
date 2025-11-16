@@ -43,13 +43,6 @@ cd apps/web
 npm install
 cd ../..
 
-# Install mobile dependencies
-echo ""
-echo "📦 Installing mobile app dependencies..."
-cd apps/mobile
-npm install
-cd ../..
-
 # Install backend dependencies
 echo ""
 echo "📦 Installing backend dependencies..."
@@ -105,11 +98,9 @@ echo "3. Start development servers (in separate terminals):"
 echo "   Terminal 1: cd apps/backend && npm run dev"
 echo "   Terminal 2: cd apps/analyzer && source venv/bin/activate && python app.py"
 echo "   Terminal 3: cd apps/web && npm run dev"
-echo "   Terminal 4: cd apps/mobile && npm start"
 echo ""
 echo "4. Access the app:"
 echo "   Web: http://localhost:3000"
-echo "   Mobile: Scan QR code with Expo Go app"
 echo ""
 echo "📖 See DEVELOPMENT.md for detailed instructions"
 echo ""

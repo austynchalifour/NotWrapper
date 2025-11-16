@@ -43,8 +43,8 @@ Paste a URL. Get a verdict in seconds.
 
 Our engine crawls public pages, analyzes JavaScript assets, detects no-code platforms, checks for exposed API keys, and identifies boilerplate templates.
 
-### 2. LiveHunt Mode (Mobile-First)
-Record your investigation live. Turn on your camera, narrate your findings, and share proof. Think: "Here's how I exposed this wrapper in 60 seconds."
+### 2. LiveHunt Mode
+Record your investigation live. Narrate your findings, and share proof. Think: "Here's how I exposed this wrapper in 60 seconds."
 
 Top hunts get featured. Climb the leaderboard. Earn credibility.
 

@@ -102,7 +102,6 @@ Context and motivation...
 ## How was it tested?
 
 - [ ] Tested locally
-- [ ] Tested on mobile
 - [ ] No console errors
 
 ## Screenshots (if applicable)
@@ -173,7 +172,6 @@ We follow a specific aesthetic (dev-core, terminal-inspired).
 **Files to edit:**
 - `apps/web/src/app/globals.css` - Styles
 - `apps/web/tailwind.config.js` - Theme
-- `apps/mobile/app/**/*.tsx` - Mobile styles
 
 ## Project Areas
 
@@ -279,7 +277,7 @@ export default function VerdictBadge(props) {
 
 - [ ] Feature works as expected
 - [ ] No console errors
-- [ ] Responsive on mobile
+- [ ] Responsive design
 - [ ] Works with slow network
 - [ ] Error states handled
 - [ ] Loading states shown

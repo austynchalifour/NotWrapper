@@ -26,9 +26,6 @@ npm install
 # Web app
 cd apps/web && npm install && cd ../..
 
-# Mobile app
-cd apps/mobile && npm install && cd ../..
-
 # Backend
 cd apps/backend && npm install && cd ../..
 
@@ -80,7 +77,7 @@ PORT=5000
 
 ## Running the Development Stack
 
-You'll need **4 terminal windows**:
+You'll need **3 terminal windows**:
 
 ### Terminal 1: Backend API
 
@@ -110,18 +107,6 @@ npm run dev
 
 Web app runs on `http://localhost:3000`
 
-### Terminal 4: Mobile App
-
-```bash
-cd apps/mobile
-npm start
-```
-
-Then:
-- Press `i` for iOS simulator
-- Press `a` for Android emulator
-- Scan QR code with Expo Go app on your phone
-
 ## Project Structure
 
 ```
@@ -134,12 +119,6 @@ notwrapper-mvp/
 │   │   │   └── lib/           # Utilities
 │   │   ├── package.json
 │   │   └── next.config.js
-│   │
-│   ├── mobile/                 # React Native mobile app
-│   │   ├── app/               # Expo Router pages
-│   │   ├── assets/            # Images, fonts
-│   │   ├── app.json
-│   │   └── package.json
 │   │
 │   ├── backend/                # Node.js API server
 │   │   ├── src/
@@ -168,7 +147,6 @@ notwrapper-mvp/
 
 ### Frontend
 - **Next.js 14**: Web framework (App Router)
-- **React Native + Expo**: Mobile framework
 - **Tailwind CSS**: Styling
 - **TypeScript**: Type safety
 
@@ -268,11 +246,6 @@ See `supabase/schema.sql` for complete schema.
    - Hot reload automatically updates browser
    - Check browser console for errors
 
-4. **Mobile Changes**
-   - Edit files in `apps/mobile/app/`
-   - Expo auto-refreshes app
-   - Shake device to open dev menu
-
 ### Testing
 
 #### Test Backend Endpoint
@@ -307,12 +280,6 @@ curl -X POST http://localhost:5000/analyze \
 3. Add 'use client' for interactivity
 4. Test in browser
 
-#### Add New Screen (Mobile)
-
-1. Create file in `apps/mobile/app/`
-2. Export default component
-3. Add to navigation if needed
-4. Test in Expo Go
 
 ## Common Issues
 
@@ -334,11 +301,6 @@ taskkill /PID <process_id> /F
 - Verify project is active in Supabase dashboard
 - Check network connectivity
 
-### Mobile App Not Loading
-
-- Clear Expo cache: `expo start -c`
-- Check BACKEND_URL points to correct IP (not localhost on physical device)
-- Use your local IP address: `http://192.168.1.x:3003`
 
 ### Python Dependencies Error
 
@@ -430,11 +392,6 @@ debugger;
 - Check Network tab for API calls
 - Use `console.log` liberally
 
-### Mobile
-- Shake device → Debug Remote JS
-- React Native Debugger
-- console.log shows in terminal
-
 ### Python
 ```python
 # Add print statements
@@ -447,7 +404,6 @@ import pdb; pdb.set_trace()
 ## Resources
 
 - [Next.js Docs](https://nextjs.org/docs)
-- [Expo Docs](https://docs.expo.dev)
 - [Supabase Docs](https://supabase.com/docs)
 - [Express.js Guide](https://expressjs.com)
 - [Flask Documentation](https://flask.palletsprojects.com)

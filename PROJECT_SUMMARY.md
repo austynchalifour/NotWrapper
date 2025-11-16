@@ -44,18 +44,7 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
 - **Styling**: Dev-core aesthetic (monochrome + neon green)
 - **Deployment**: Ready for Vercel
 
-### ✅ 4. React Native Mobile App (`apps/mobile`)
-- **Technology**: Expo + React Native + TypeScript
-- **Features**:
-  - WrapperCheck scanner
-  - **LiveHunt Mode**: Face cam + screen recording with narration
-  - Marketplace browser
-  - Video preview and saving
-- **Screens**: 4 main screens (home, scan, livehunt, marketplace)
-- **Camera Integration**: Expo Camera for live recording
-- **Deployment**: Ready for EAS build (iOS + Android)
-
-### ✅ 5. Database & Storage (Supabase)
+### ✅ 4. Database & Storage (Supabase)
 - **Schema**: Complete PostgreSQL schema with 8 tables
   - profiles, tools, scans, hunts, badges, comments, votes, leaderboard_points
 - **RLS Policies**: Row-level security configured
@@ -63,7 +52,7 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
 - **Triggers**: Auto-update timestamps, vote counts
 - **Seed Data**: Sample tools and scans
 
-### ✅ 6. Badge Generator Service
+### ✅ 5. Badge Generator Service
 - **Technology**: Sharp (Node.js)
 - **Output**: SVG + PNG formats
 - **Features**: 
@@ -72,14 +61,13 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
   - Supabase storage upload
   - Public URL generation
 
-### ✅ 7. Deployment Configurations
+### ✅ 6. Deployment Configurations
 - **Vercel**: Web app deployment config
 - **Render**: Backend + Analyzer configs
 - **Docker**: Dockerfiles for all services
 - **Docker Compose**: Local multi-service setup
-- **EAS**: Mobile app build configuration
 
-### ✅ 8. Documentation
+### ✅ 7. Documentation
 - `README.md` - Project overview
 - `QUICKSTART.md` - 15-minute setup guide
 - `DEVELOPMENT.md` - Detailed development guide
@@ -91,12 +79,6 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
 ## 🏗️ Architecture
 
 ```
-┌─────────────┐
-│   Mobile    │
-│  (Expo)     │
-└──────┬──────┘
-       │
-       ↓
 ┌─────────────┐         ┌──────────────┐         ┌──────────────┐
 │   Web App   │────────→│   Backend    │────────→│   Analyzer   │
 │  (Next.js)  │         │  (Node.js)   │         │   (Python)   │
@@ -134,7 +116,6 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
 
 ### Core Features
 - [x] WrapperCheck™ scanning engine
-- [x] LiveHunt mode (mobile video recording)
 - [x] Certified NotWrapper™ badge generation
 - [x] Verified marketplace directory
 - [x] Community leaderboard
@@ -150,13 +131,6 @@ A complete full-stack MVP for NotWrapper - an app that detects whether AI tools 
 - [x] Custom code vs boilerplate analysis
 - [x] Stack DNA profiling
 
-### Mobile-Specific
-- [x] Face cam overlay during recording
-- [x] Video narration capture
-- [x] Video preview and export
-- [x] Tool scanning on mobile
-- [x] Marketplace browsing
-
 ## 📁 File Structure
 
 ```
@@ -166,11 +140,6 @@ notwrapper-mvp/
 │   │   ├── src/app/              # Pages & layouts
 │   │   ├── src/components/       # React components
 │   │   ├── src/lib/              # Utilities
-│   │   └── package.json
-│   │
-│   ├── mobile/                   # React Native app (42 files)
-│   │   ├── app/                  # Screens
-│   │   ├── app.json              # Expo config
 │   │   └── package.json
 │   │
 │   ├── backend/                  # Node.js API (25 files)
@@ -212,7 +181,6 @@ notwrapper-mvp/
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
 | **Web** | Next.js 14 | Web application |
-| **Mobile** | React Native + Expo | iOS/Android apps |
 | **Backend** | Express.js | REST API |
 | **Analyzer** | Flask + Python | Wrapper detection |
 | **Database** | Supabase (PostgreSQL) | Data storage |
@@ -232,17 +200,15 @@ notwrapper-mvp/
 # - Run schema.sql
 # - Add credentials to .env files
 
-# 3. Start development (4 terminals)
+# 3. Start development (3 terminals)
 cd apps/backend && npm run dev
 cd apps/analyzer && source venv/bin/activate && python app.py
 cd apps/web && npm run dev
-cd apps/mobile && npm start
 
 # 4. Access
 # Web: http://localhost:3000
 # API: http://localhost:3001
 # Analyzer: http://localhost:5000
-# Mobile: Scan QR with Expo Go
 ```
 
 ## 📈 What's Next
@@ -313,11 +279,10 @@ Upgrade thresholds clearly documented in DEPLOYMENT.md.
 
 ## ✨ Highlights
 
-1. **Complete vertical integration**: Database → Backend → Web → Mobile
+1. **Complete vertical integration**: Database → Backend → Web
 2. **Production-ready**: Dockerized, configured, documented
 3. **Real functionality**: Not mockups - actual working features
-4. **Mobile-first LiveHunt**: Unique feature with camera integration
-5. **Extensible architecture**: Easy to add new detection patterns
+4. **Extensible architecture**: Easy to add new detection patterns
 6. **Community-focused**: Voting, comments, leaderboards
 7. **Developer experience**: Setup scripts, hot reload, clear errors
 
@@ -327,7 +292,6 @@ All services are ready for production deployment:
 - Web app → Vercel (one command)
 - Backend → Render (one-click)
 - Analyzer → Render (one-click)
-- Mobile → EAS build (iOS + Android)
 
 Follow DEPLOYMENT.md for step-by-step instructions.
 

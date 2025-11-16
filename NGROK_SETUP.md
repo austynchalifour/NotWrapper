@@ -2,7 +2,6 @@
 
 ## What is ngrok?
 ngrok creates a secure tunnel to your localhost, giving you a public URL to access your local development server. Perfect for:
-- Testing mobile app with your local backend
 - Testing authentication callbacks
 - Sharing your dev environment with others
 - Testing webhooks
@@ -181,50 +180,6 @@ ngrok start --all
 
 ---
 
-## Mobile App Setup
-
-### For React Native (Expo)
-
-#### 1. Expose Backend via ngrok
-
-```bash
-ngrok http 3003
-# Get URL: https://abc123.ngrok-free.app
-```
-
-#### 2. Update Mobile App Environment
-
-Create/update `apps/mobile/.env`:
-
-```env
-EXPO_PUBLIC_BACKEND_URL=https://abc123.ngrok-free.app
-EXPO_PUBLIC_SUPABASE_URL=your_supabase_url
-EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-#### 3. Update Mobile API Calls
-
-Make sure your mobile app uses the environment variable. Example in `apps/mobile/app/scan.tsx`:
-
-```typescript
-const API_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'http://localhost:3003'
-
-// Use API_URL for all fetch calls
-fetch(`${API_URL}/api/scan`, {
-  method: 'POST',
-  // ...
-})
-```
-
-#### 4. Restart Expo
-
-```bash
-cd apps/mobile
-npx expo start --clear
-```
-
----
-
 ## Troubleshooting
 
 ### Issue: "Visit Site" Button on ngrok
@@ -376,7 +331,6 @@ curl http://localhost:4040/api/tunnels
 - [ ] Frontend can reach backend through ngrok
 - [ ] Scans complete successfully
 - [ ] Authentication works (Supabase redirects configured)
-- [ ] Mobile app connects to ngrok backend
 - [ ] No CORS errors in console
 
 ---
